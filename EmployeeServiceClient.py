@@ -26,5 +26,10 @@ def serviceTester():
     response = requests.post(api_url, json=employee)
     print (response.json())
 
+    # Test delete_employee endpoint
+    api_url = api_base_url + '/101'
+    response = requests.delete(api_url)
+    print (response.json())
+
 if __name__ == '__main__':
     serviceTester()
