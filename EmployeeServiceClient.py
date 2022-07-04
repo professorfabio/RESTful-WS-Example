@@ -2,7 +2,7 @@ import requests
 import const
 
 def serviceTester():
-    api_base_url = 'http://' + const.IP_ADD + ':' + const.PORT + '/empdb/employee'
+    api_base_url = 'http://' + const.IP_ADD + ':' + str(const.PORT) + '/empdb/employee'
 
     # Test get_all_employees endpoint
     api_url = api_base_url 
