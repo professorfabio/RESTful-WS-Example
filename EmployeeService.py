@@ -37,6 +37,9 @@ def updateEmp(empId):
 
     em = [ emp for emp in empDB if (emp['id'] == empId) ]
 
+    if len(em) == 0:
+        abort(404)
+
     if 'name' in request.json : 
         em[0]['name'] = request.json['name']
 
