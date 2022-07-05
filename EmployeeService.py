@@ -63,11 +63,11 @@ def createEmp():
 def deleteEmp(empId):
     em = [ emp for emp in empDB if (emp['id'] == empId) ]
 
-    if len(em) == 0:
-       abort(404)
-
-    empDB.remove(em[0])
-    return jsonify({'response':'Success'})
+    if len(em) > 0:
+        empDB.remove(em[0])
+        return jsonify({'response':'Success'})
+    else:
+        return jsonify({'response':'Failure'})
 
 if __name__ == '__main__':
  app.run(host='0.0.0.0', port=5000)
