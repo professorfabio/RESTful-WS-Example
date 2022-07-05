@@ -38,11 +38,12 @@ def updateEmp(empId):
 
     em = [ emp for emp in empDB if (emp['id'] == empId) ]
 
-    if 'name' in request.json : 
-        em[0]['name'] = request.json['name']
+    if len(em) > 0:
+        if 'name' in request.json : 
+            em[0]['name'] = request.json['name']
 
-    if 'title' in request.json:
-        em[0]['title'] = request.json['title']
+        if 'title' in request.json:
+            em[0]['title'] = request.json['title']
 
     return jsonify(em)
 
