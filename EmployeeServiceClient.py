@@ -20,8 +20,7 @@ def serviceTester():
     response = requests.put(api_url, json=update)
     print (response.json())
     
-    api_url = api_base_url + '/101'+'4000'
-    update = {"title":"Programmer"}
+    api_url = api_base_url + '/101'+'/4000'
     response = requests.put(api_url, json=update)
     print (response.json())
 
