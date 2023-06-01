@@ -23,6 +23,10 @@ def serviceTester():
     api_url = api_base_url + '/201'+'/40000'
     response = requests.put(api_url, json=update)
     print (response.json())
+    
+    api_url = api_base_url + '/201/40000/Programmer'
+    response = requests.put(api_url, json=update)
+    print (response.json())
 
     # Test create_employee endpoint
     api_url = api_base_url
