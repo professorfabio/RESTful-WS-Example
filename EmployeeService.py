@@ -50,7 +50,7 @@ def updateEmp(empId):
     return jsonify(em)
 
 @app.route('/empdb/employee/<empId>/<empSal>',methods=['PUT'])
-def updateEmp(empId,empSal):
+def updateEmpSal(empId,empSal):
     em = [ emp for emp in empDB if (emp['id'] == empId) ]
     em[0]['salary'] = empSal
     return jsonify(em)
