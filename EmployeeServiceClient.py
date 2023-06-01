@@ -20,7 +20,7 @@ def serviceTester():
     response = requests.put(api_url, json=update)
     print (response.json())
     
-    api_url = api_base_url + '/101'+'/4000'
+    api_url = api_base_url + '/201'+'/40000'
     response = requests.put(api_url, json=update)
     print (response.json())
 
