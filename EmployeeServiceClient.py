@@ -4,6 +4,8 @@ import const
 def serviceTester():
     api_base_url = 'http://' + const.IP_ADD + ':' + str(const.PORT) + '/empdb/employee'
 
+    print ('Will connect to: ' + api_base_url)
+    
     # Test get_all_employees endpoint
     api_url = api_base_url 
     response = requests.get(api_url)
