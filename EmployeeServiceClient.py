@@ -30,15 +30,15 @@ def serviceTester():
     response = requests.put(api_url, json=update)
     print (response.json())
     
-    api_url = api_base_url + '/201/40000/Programmer'
-    print ('Calling PUT on endpoint: ' + api_url)
-    try:
-        response = requests.put(api_url, json=update)
-    except requests.exceptions.HTTPError as errh: 
-        print("HTTP Error") 
-        print(errh.args[0])
-    else:
-        print (response.json())
+    # api_url = api_base_url + '/201/40000/Programmer'
+    # print ('Calling PUT on endpoint: ' + api_url)
+    # try:
+    #     response = requests.put(api_url, json=update)
+    # except requests.exceptions.HTTPError as errh: 
+    #     print("HTTP Error") 
+    #     print(errh.args[0])
+    # else:
+    #     print (response.json())
 
     # Test create_employee endpoint
     api_url = api_base_url
