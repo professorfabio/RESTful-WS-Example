@@ -34,8 +34,9 @@ def serviceTester():
     print ('Calling PUT on endpoint: ' + api_url)
     try:
         response = requests.put(api_url, json=update)
-    except requests.exceptions.HTTPError as err:
-        print (err)
+    except requests.exceptions.HTTPError as errh: 
+        print("HTTP Error") 
+        print(errh.args[0])
     else:
         print (response.json())
 
